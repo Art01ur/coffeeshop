@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Purchase Information{% endblock %}
+{% block content %}
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Information</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Purchase Information</h1>
+
+            <p id="message">
+            {{ message }}
+        </p>
+
+        </p>
+    </div>
+</body>
+</html>
+{% endblock %}
