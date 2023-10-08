@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %}{{ product.name }}{% endblock %}
+{% block content %}
 
-</body>
-</html>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+<div class="product-details">
+    <h1 class="product-name">{{ product.name }}</h1>
+    <h2 class="product-type">{{ product.type }}</h2>
+    <p class="product-price">Price: ${{ product.price }}</p>
+    <p class="product-country">Country: {{ product.country }}</p>
+    <p class="product-roast">Roast: {{ product.roast }}</p>
+    <p class="product-quantity">Quantity: {{ product.quantity }}</p>
+    <a href="{% url 'shop:product_details' product.id %}" class="button">Buy</a>
+</div>
+
+{% endblock %}
+

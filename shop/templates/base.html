@@ -1,10 +1,35 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+
 </head>
 <body>
-
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+        <a href="{% url 'shop:index' %}" class="nav-button">
+            <i class="fas fa-coffee"></i> Coffee Shop
+        </a>
+        <span class="navbar-text">
+            <a href="/admin/" target="_blank" class="nav-button right">
+                <i class="fas fa-cogs"></i> Admin
+            </a>
+            <a href="/api/v1/" target="_blank" class="nav-button right">
+                <i class="fas fa-code"></i> Api
+            </a>
+        </span>
+    </div>
+</nav>
+<main class="container">
+    {% block content%}
+    {% endblock %}
+</main>
 </body>
 </html>
