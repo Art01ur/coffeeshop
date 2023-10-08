@@ -22,3 +22,5 @@ urlpatterns = [
     path('', include('shop.urls')),
     path('api/', include('api.urls')),
 ]
+
+handler404 = 'shop.views.page_not_found_404'

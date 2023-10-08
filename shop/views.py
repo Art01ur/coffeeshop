@@ -26,3 +26,7 @@ def product_buying(request, product_id):
         message = "Sorry, we don't have this product in stock"
 
     return render(request, 'product_buying.html', {'message': message})
+
+
+def page_not_found_404(request, exception):
+    return render(request, 'page_not_found.html', status=404)

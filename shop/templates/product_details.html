@@ -12,7 +12,7 @@
     <p class="product-country">Country: {{ product.country }}</p>
     <p class="product-roast">Roast: {{ product.roast }}</p>
     <p class="product-quantity">Quantity: {{ product.quantity }}</p>
-    <a href="{% url 'shop:product_details' product.id %}" class="button">Buy</a>
+    <td><a href="{% url 'shop:product_buying' product.id %}" class="button">Buy</a></td>
 </div>
 
 {% endblock %}

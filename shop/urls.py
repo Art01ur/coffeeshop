@@ -11,3 +11,5 @@ urlpatterns = [
     path('upload/data', defs_for_first_config.upload_data, name='upload'),
 
 ]
+
+
